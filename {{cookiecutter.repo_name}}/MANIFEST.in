@@ -1,2 +1,3 @@
 include *.txt *.ini *.cfg *.rst
-recursive-include base *.ico *.png *.css *.gif *.jpg *.pt *.txt *.mak *.mako *.js *.html *.xml *.jinja2
+recursive-include {{cookiecutter.repo_name}} *.ico *.png *.css *.gif *.jpg *.pt *.txt *.mak *.mako *.js *.html *.xml *.jinja2
+
