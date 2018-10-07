@@ -1,0 +1,5 @@
+{
+    "project_name": "Heptet App Scaffold",
+    "repo_name": "{{cookiecutter.project_name.lower().strip().replace(' ', '_').replace(':', '_').replace('-', '_').replace('!', '_')}}",
+  "version": "0.0.0"
+}
