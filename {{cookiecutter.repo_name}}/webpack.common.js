@@ -33,6 +33,13 @@ module.exports = function (options) {
     ];
 
     const commonConfig = {
+        output: {
+            filename: '[name].js',
+            // output things to here so they become part of our dist
+            path: options.outputPath,
+            publicPath: '/build/dist',
+        },
+
         resolve: {modules: ['.', 'node_modules']},
         plugins,
         node: {
