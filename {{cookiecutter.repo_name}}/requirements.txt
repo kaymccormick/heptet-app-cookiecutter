@@ -1,1 +1,4 @@
 git+file:///opt/git/email-pyr.git
+git+file:///opt/git/app/heptet-model.git
+git+https://github.com/kaymccormick/marshmallow.git
+
