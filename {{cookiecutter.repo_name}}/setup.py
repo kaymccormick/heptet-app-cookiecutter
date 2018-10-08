@@ -20,7 +20,7 @@ requires = [
     'pyramid',
     'pyramid_jinja2',
     'pyramid_debugtoolbar',
-    'heptet_app',
+    'heptet-app',
     'waitress',
 ]
 
