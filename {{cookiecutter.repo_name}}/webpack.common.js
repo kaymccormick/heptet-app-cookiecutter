@@ -9,6 +9,20 @@ const webpack = require('webpack')
 const merge = require('webpack-merge');
 
 module.exports = function (options) {
+    const packageInfo = require(path.resolve(__dirname, 'package.json'));
+    packages = packageInfo.us_heptet[packageInfo.name].packages;
+
+    const packageRoot = path.resolve(__dirname, packages[0]);
+    const buildDir = path.resolve(packageRoot, 'build');
+    const outputPath = path.resolve(buildDir, 'dist');
+    const templateOutputPath = path.resolve(buildDir, 'templates');
+
+    options.packageRoot = packageRoot;
+    options.buildDir = buildDir;
+    options.outputPath = outputPath;
+    options.templateOutputPath = templateOutputPath;
+    options.context = __dirname;
+
     const appPlugin = new HeptetAppWebpackPlugin(options);
     const plugins = [
         appPlugin,
