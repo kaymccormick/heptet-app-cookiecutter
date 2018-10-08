@@ -1,4 +1,3 @@
-git+ssh://kay@10.8.0.1/
 git+ssh://kay@10.8.0.1/opt/git/email-pyr.git
 git+https://github.com/kaymccormick/db-dump.git
 git+ssh://kay@10.8.0.1/opt/git/app/heptet-model.git
