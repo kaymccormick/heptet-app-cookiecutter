@@ -12,7 +12,7 @@
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
     "grunt": "^1.0.3",
-    "heptet-app-webpack-plugin": "https://heptet.us/dist/build/heptet-app-webpack-plugin.tar.gz",
+    "heptet-app-webpack-plugin": "^0.43.1",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.6.0",
     "postcss-loader": "^3.0.0",
