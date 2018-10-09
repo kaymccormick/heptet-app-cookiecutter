@@ -1,5 +1,5 @@
 {{ cookiecutter.project_name }}
-------------------------------------------------------
+===============================
 
 Pre-requisites:
 
@@ -9,7 +9,7 @@ Pre-requisites:
 
 
 Building
-========
+--------
 
 Create a virtualenv
 -------------------
