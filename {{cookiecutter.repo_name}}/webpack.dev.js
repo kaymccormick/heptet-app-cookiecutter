@@ -3,6 +3,10 @@
 const path = require('path');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
+const appConfig = require('./heptet-app-config');
+const EntryPoints = require('heptet-app-webpack-plugin/lib/EntryPoints');
+
+const entryPoints = new EntryPoints(appConfig.entry_points_json_endpoint)
 
 const devConfig = {
     mode: 'development', // https://webpack.js.org/concepts/mode/
@@ -17,14 +21,17 @@ const devConfig = {
     }
 };
 
-module.exports = new Promise((resolve, reject) => {
-    common({}).then(commonConfig => {
-        return merge(commonConfig, devConfig);
-    }).then(config => {
-        console.log("config = ", config);
-        return config;
+// Promise.all([
+//         Promise.resolve(commonConfig),
+//     ]).then(configs => merge(...configs));
 
-    })
-        .then(resolve)
-});
+module.exports = Promise.all([
+    common({}),
+    Promise.resolve(devConfig),
+    entryPoints.getPromise().then(entryPoints.entryPointsToEntry).then(entry => {
+        {
+            entry
+        }
+    }),
+]).then(configs => merge(...configs));
 

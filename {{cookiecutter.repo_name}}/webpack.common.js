@@ -5,12 +5,12 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const HeptetAppWebpackPlugin = require('heptet-app-webpack-plugin');
-const webpack = require('webpack')
+const webpack = require('webpack');
 const merge = require('webpack-merge');
 
 module.exports = function (options) {
     const packageInfo = require(path.resolve(__dirname, 'package.json'));
-    packages = packageInfo.us_heptet[packageInfo.name].packages;
+    const packages = packageInfo.us_heptet[packageInfo.name].packages;
 
     const packageRoot = path.resolve(__dirname, packages[0]);
     const buildDir = path.resolve(packageRoot, 'build');
