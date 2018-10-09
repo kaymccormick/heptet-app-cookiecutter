@@ -22,6 +22,7 @@ module.exports = function (options) {
     options.outputPath = outputPath;
     options.templateOutputPath = templateOutputPath;
     options.context = __dirname;
+    options.entry_points_json_endpoint = 'http://127.0.0.1:6643/entry_points_json';
 
     const appPlugin = new HeptetAppWebpackPlugin(options);
     const plugins = [
