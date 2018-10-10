@@ -1,6 +1,7 @@
 from pyramid.config import Configurator
+from pyramid.response import Response
 
-from heptet_app import get_root
+from heptet_app import get_root, IResourceRoot, IEntryPointFactory
 
 
 def wsgi_app(global_config, **settings):
@@ -11,6 +12,12 @@ def wsgi_app(global_config, **settings):
     config.include('heptet_app')
     config.add_static_view('dist', 'build/dist')
     config.add_static_view('build', 'build')
+
+    root = config.registry.getUtility(IResourceRoot)
+    epf = config.registry.getUtility(IEntryPointFactory);
+
+    hello_resource = root.create_resource('hello', epf('hello'))
+    config.add_view(lambda x, r: Response("Hello world."), context=type(hello_resource))
 
     #config.include('heptet_model')
     #config.include('entity_crud')
