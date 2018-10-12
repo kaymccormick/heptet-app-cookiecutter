@@ -6,7 +6,7 @@ const common = require('./webpack.common.js');
 const appConfig = require('./heptet-app-config');
 const EntryPoints = require('heptet-app-webpack-plugin/lib/EntryPoints');
 
-const entryPoints = new EntryPoints(appConfig.entry_points_json_endpoint);
+const entryPoints = new EntryPoints(appConfig.entryPointsJsonEndpoint);
 const options = {entryPoints, appConfig};
 
 const devConfig = {
