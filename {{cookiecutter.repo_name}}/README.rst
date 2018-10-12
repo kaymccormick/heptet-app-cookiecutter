@@ -48,3 +48,9 @@ Run the build:
 
 
 $ npm run build-dev
+
+Troubleshooting
+---------------
+
+If you receive a webpack error, make sure you have the latest dev
+branch of marshmallow installed. The shape of the data is incorrect in 2.x versions.
