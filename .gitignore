@@ -1,0 +1,9 @@
+.idea
+.tox
+*.egg-info
+node_modules
+*~
+venv
+env
+venv[0-9]*
+env[0-9]*
