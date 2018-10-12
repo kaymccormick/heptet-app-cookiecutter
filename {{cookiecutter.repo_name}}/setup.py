@@ -11,7 +11,7 @@ pkg_version = package_json['version']
 packages = package_json['us_heptet'][pkg_name]['packages']
 
 here = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(here, 'README.txt')) as f:
+with open(os.path.join(here, 'README.rst')) as f:
     README = f.read()
 with open(os.path.join(here, 'CHANGES.txt')) as f:
     CHANGES = f.read()
