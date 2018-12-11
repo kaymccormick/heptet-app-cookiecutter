@@ -10,6 +10,18 @@ def wsgi_app(global_config, **settings):
     config = Configurator(settings=settings, root_factory=get_root)
     config.include('pyramid_jinja2')
     config.include('heptet_app')
+    {% if cookiecutter.include_sqlalchemy_packages %}
+    config.include('heptet_app_sqlalchemy')
+    config.include('heptet_model_adapter')
+    root = config.get_root_resource()
+    assert root
+    model = root.create_resource("model")
+    config.set_resource_context(model)
+    config.set_resource_context(model)
+    config.include('heptet_model.pyramid')
+    {% endif %}
+
+
     config.add_static_view('dist', 'build/dist')
     config.add_static_view('build', 'build')
 

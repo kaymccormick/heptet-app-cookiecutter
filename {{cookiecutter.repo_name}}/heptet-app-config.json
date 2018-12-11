@@ -1,5 +1,4 @@
 {
     "urlHostname": "localhost",
-    "urlPort": 6643,
-    "entryPointsJsonEndpoint": "http://localhost:6643/entry_points/json"
+    "urlPort": 6643
 }

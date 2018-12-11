@@ -23,6 +23,7 @@ requires = [
     'waitress',
     'zope.component',
     'zope.interface',
+    'dataclasses',
 ]
 
 tests_require = [

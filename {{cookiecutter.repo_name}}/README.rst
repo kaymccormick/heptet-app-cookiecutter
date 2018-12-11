@@ -3,8 +3,8 @@
 
 Pre-requisites:
 
-* Python 3.7
-* Node JS (version ??)
+* Python 3.4 (?)
+* Node JS (version ?)
 * Yarn
 
 

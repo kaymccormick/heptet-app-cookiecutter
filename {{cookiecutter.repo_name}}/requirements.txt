@@ -1,5 +1,7 @@
-git+ssh://10.8.0.1/opt/git/email-pyr.git
-git+https://github.com/kaymccormick/db-dump.git
-git+ssh://10.8.0.1/opt/git/app/heptet-model.git
+dataclasses
 git+https://github.com/kaymccormick/marshmallow.git
-
+{# git+ssh://10.8.0.1/opt/git/app/heptet-app.git #}
+git+https://github.com/kaymccormick/db-dump.git
+{% if cookiecutter.include_sqlalchemy_packages %}{#git+ssh://10.8.0.1/opt/git/app/heptet-app-sqlalchemy.git
+git+ssh://10.8.0.1/opt/git/app/heptet-model.git
+git+ssh://10.8.0.1/opt/git/app/heptet-model-adapter.git#}{% endif %}
