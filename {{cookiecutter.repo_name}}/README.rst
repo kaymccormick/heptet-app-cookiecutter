@@ -28,26 +28,13 @@ Install the python package in development mode using pip.
 
 $ pip install -e .
 
-Run "process_views"
+Run "grunt"
 -------------------
-This 'tool' is installed as part of heptet-app. Pass "-c development.ini" like so:
+Run build process.
 
-$ process_views -c development.ini
+$ yarn run grunt
 
 This should produce the javascript entry points for your application, to be processed by webpack.
-
-Run an instance of the pyramid application for use by the build process.
-------------------------------------------------------------------------
-On windows you will need to open two terminals since you cannot run a task in the background,
-as far as I know.
-
-$ pserve development.ini &
-
-Run the build:
---------------
-
-
-$ npm run build-dev
 
 Troubleshooting
 ---------------
